@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shanzita Siddiqua — CS & AI student at Rice University. Distributed systems, machine learning research, and open source." />
+  <meta property="og:title" content="Shanzita Siddiqua" />
+  <meta property="og:description" content="CS & AI student at Rice University. Distributed systems, ML research, open source." />
+  <meta property="og:type" content="website" />
+  <title>Shanzita Siddiqua</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#top" class="brand">Shanzita Siddiqua</a>
+    <nav class="topnav">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="i-sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="i-moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- INTRO -->
+    <section class="intro">
+      <p class="kicker">Houston, TX · CS &amp; AI @ Rice</p>
+      <h1>
+        Hi, I'm Shanzita — I build <em>distributed systems</em>, work on <em>ML research</em>, and ship <em>agentic products</em>.
+      </h1>
+      <p class="lede">
+        I'm a sophomore at Rice University studying Computer Science and Artificial Intelligence.
+        Right now I'm contributing to Apache Cassandra through Google Summer of Code, building AI-driven
+        healthcare software at Recruit.so, and researching vision-language models at Rice's Chili Lab.
+      </p>
+      <p class="meta-line">
+        <a href="mailto:ss516@rice.edu">ss516@rice.edu</a>
+        <span>·</span>
+        <a href="https://linkedin.com/in/shanzita-siddiqua" target="_blank" rel="noopener">LinkedIn</a>
+        <span>·</span>
+        <a href="https://github.com/Shanzita" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="/ShanzitaSiddiqua_CV.pdf">Résumé</a>
+      </p>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <h2 class="sec-title">Work</h2>
+
+      <div class="entries">
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>2026 — Now</span>
+            <span class="muted">San Francisco · Remote</span>
+          </div>
+          <div class="entry-body">
+            <h3>Open Source Contributor <span class="at">at Apache Software Foundation</span></h3>
+            <p class="entry-org">Google Summer of Code</p>
+            <ul>
+              <li>Architecting <strong>Graceful Disconnect</strong> across Apache Cassandra's Java, Python, and C/C++ drivers — a networking protocol and DRAINING node state that reduces client timeouts to near-zero during rolling restarts.</li>
+              <li>Cut node drain time from <strong>20s to 7s</strong> by routing DRAINING through load-balancing and reconnection policies; validated on Docker clusters.</li>
+            </ul>
+            <p class="tech">Java · C++ · Python · Distributed Systems · Docker</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>2026 — Now</span>
+            <span class="muted">Wilmington, DE · Remote</span>
+          </div>
+          <div class="entry-body">
+            <h3>Software Engineering &amp; AI Intern <span class="at">at Recruit.so</span></h3>
+            <p class="entry-org">Healthcare · Multi-agent NLP</p>
+            <ul>
+              <li>Reduced patient follow-up burden by <strong>40%</strong> in a live clinical pilot with a cross-platform React Native (TypeScript) app — Expo, Redux, React Navigation, FCM push.</li>
+              <li>Reached <strong>98%+ follow-up detection accuracy</strong> by engineering a stateful multi-agent NLP engine in LangGraph with sliding context-window memory, on a FastAPI + Postgres + Celery backend.</li>
+              <li>Automated Dockerized deployments to GCP Cloud Run via CI/CD, and grounded AI responses using a PubMed RAG pipeline.</li>
+            </ul>
+            <p class="tech">React Native · TypeScript · LangGraph · FastAPI · RAG · GCP</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>2025 — Now</span>
+            <span class="muted">Houston, TX</span>
+          </div>
+          <div class="entry-body">
+            <h3>ML Research Assistant <span class="at">at Chili Lab, Rice University</span></h3>
+            <p class="entry-org">Retrieval systems · RAG benchmarking</p>
+            <ul>
+              <li>Built <strong>FreshRAG-Bench</strong>, a TypeScript layer over Python ML services behind a REST boundary — cut refresh compute ~60% via incremental dedup; adopted by 18+ labmates.</li>
+              <li>Boosted retrieval <strong>recall@k ~12%</strong> by tuning RL-trained retrievers, and profiled KV-cache reuse for serving-latency gains.</li>
+            </ul>
+            <p class="tech">RAG · Retrieval · RL · TypeScript · Python</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>Summer 2025</span>
+            <span class="muted">Houston, TX</span>
+          </div>
+          <div class="entry-body">
+            <h3>ML Research Assistant <span class="at">at Rice SURF</span></h3>
+            <p class="entry-org">Vision-language model interpretability</p>
+            <ul>
+              <li>Authored <strong>VPatch</strong>, a framework to patch hidden states and causally localize vision-text fusion in VLM decoders.</li>
+              <li>Traced fusion bands across LLaVA, DeepSeek-VL, and Qwen-VL; flagged spatial &amp; negation failures.</li>
+              <li>Targeted fusion-band LoRA adapters for <strong>100% hallucination correction at &lt;50% of baseline params</strong>.</li>
+            </ul>
+            <p class="tech">VLMs · PyTorch · LoRA · Interpretability</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="sec-title">Projects</h2>
+
+      <div class="proj-list">
+
+        <a class="proj" href="https://devpost.com/software/compass" target="_blank" rel="noopener">
+          <div class="proj-main">
+            <h3>Compass</h3>
+            <p>AI trip planner — 8+ agents pairing retrieval with autonomous cross-vendor negotiation, backed by a distributed Saga with compensating transactions for atomic bookings.</p>
+            <p class="tech">JavaScript · RAG · Agentic Systems · Saga Pattern</p>
+          </div>
+          <div class="proj-side">
+            <span class="proj-date">Jan 2026</span>
+            <span class="proj-award">HackBrown '26 · FetchAI Track Award</span>
+            <span class="proj-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="proj" href="https://github.com/Shanzita/nexhacks26" target="_blank" rel="noopener">
+          <div class="proj-main">
+            <h3>NeuroTrack</h3>
+            <p>Dual-mode Parkinson's screening prototype fusing voice biomarkers (jitter, shimmer, HNR, syllable rate) with real-time vision. Reached <strong>86% combined accuracy</strong> across a 4-task speech protocol, benchmarked against the UCI Parkinson's dataset.</p>
+            <p class="tech">JavaScript · ElevenLabs · Overshoot SDK · Voice ML · Computer Vision</p>
+          </div>
+          <div class="proj-side">
+            <span class="proj-date">Jan 2026</span>
+            <span class="proj-award">NexHacks '26</span>
+            <span class="proj-arrow">↗</span>
+          </div>
+        </a>
+
+        <a class="proj" href="https://devpost.com/software/studybunny-763fqo" target="_blank" rel="noopener">
+          <div class="proj-main">
+            <h3>StudyBunny</h3>
+            <p>An AI study buddy that pulls Canvas assignments, evaluates them by due date and workload, and generates a personalized study plan — with a Gemini-powered voice assistant for hands-free task updates.</p>
+            <p class="tech">React · Django · Python · Gemini · Canvas API</p>
+          </div>
+          <div class="proj-side">
+            <span class="proj-date">Sep 2025</span>
+            <span class="proj-award">HackRice 15</span>
+            <span class="proj-arrow">↗</span>
+          </div>
+        </a>
+
+        <div class="proj proj-static">
+          <div class="proj-main">
+            <h3>Crisis-Language Detection</h3>
+            <p>ML and NLP pipelines delivered to Abt Global with 10+ teammates, detecting self-harm and suicidal-ideation signals at <strong>97% accuracy</strong> across 3K+ Reddit posts. Fine-tuned BERT against logistic-regression and K-means baselines.</p>
+            <p class="tech">BERT · NLP · ML · Privacy</p>
+          </div>
+          <div class="proj-side">
+            <span class="proj-date">Aug 2025 — Jan 2026</span>
+            <span class="proj-award">Break Through Tech AI Fellowship · Abt Global</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & HONORS -->
+    <section class="section two-col">
+      <div>
+        <h2 class="sec-title">Education</h2>
+        <div class="edu">
+          <h3>Rice University</h3>
+          <p class="entry-org">B.S., Computer Science &amp; Artificial Intelligence · Aug 2024 – May 2028</p>
+          <p class="muted">
+            Coursework: Machine Learning, Deep Learning Systems (Grad), Deep Learning for Vision &amp; Language (Grad),
+            Linear Algebra, Statistics, Computer Organization, Program Design, Algorithmic Thinking.
+          </p>
+        </div>
+      </div>
+      <div>
+        <h2 class="sec-title">Recognition</h2>
+        <ul class="honors">
+          <li><strong>ICPC div.2</strong> — Silver, South Central USA Regional</li>
+          <li><strong>Rice Datathon 2026</strong> — 1st Place, BroadVail Capital Finance Track (500+ participants)</li>
+          <li><strong>Sustaining Excellence in Research Award</strong>, Rice University (2025–26)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="sec-title">Toolbox</h2>
+      <dl class="tools">
+        <div>
+          <dt>Languages</dt>
+          <dd>C++, C, Python, Java, Go, Rust, TypeScript, JavaScript, SQL, Assembly</dd>
+        </div>
+        <div>
+          <dt>AI / ML</dt>
+          <dd>PyTorch, TensorFlow, scikit-learn, LangChain, LangGraph, RAG, Vertex AI, Vercel AI SDK, Hugging Face</dd>
+        </div>
+        <div>
+          <dt>Infrastructure</dt>
+          <dd>FastAPI, Django, Node.js, React, Netty, Tailwind, Docker, Kubernetes, Linux, Git, Maven, Celery, PostgreSQL, Supabase, pgvector, Redis, CI/CD, GCP, AWS, WebSocket, OpenRouter</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2 class="sec-title">Contact</h2>
+      <p class="lede">
+        Open to internships, research collaborations, and interesting conversations about ML systems and distributed
+        infrastructure. I usually reply within a day.
+      </p>
+      <p class="contact-actions">
+        <a class="btn" href="mailto:ss516@rice.edu">ss516@rice.edu →</a>
+        <a class="link" href="https://linkedin.com/in/shanzita-siddiqua" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link" href="https://github.com/Shanzita" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Shanzita Siddiqua</p>
+      <p class="muted">Designed &amp; built in Houston.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
