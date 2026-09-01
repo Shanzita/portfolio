@@ -17,6 +17,7 @@
   <header class="topbar">
     <a href="#top" class="brand">Shanzita Siddiqua</a>
     <nav class="topnav">
+      <a href="#open-source">Open Source</a>
       <a href="#work">Work</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -37,9 +38,10 @@
         Hi, I'm Shanzita — I build <em>distributed systems</em>, work on <em>ML research</em>, and ship <em>agentic products</em>.
       </h1>
       <p class="lede">
-        I'm an upcoming junior at Rice University studying Computer Science and Artificial Intelligence.
-        Right now I'm contributing to Apache Cassandra through Google Summer of Code, building AI-driven
-        healthcare software at Recruit.so, and researching vision-language models at Rice's Chili Lab.
+        I'm a junior at Rice University studying Computer Science and Artificial Intelligence.
+        This past summer I extended Apache Cassandra's drivers through Google Summer of Code and built
+        AI-driven healthcare software at Recruit.so. These days I'm contributing to open source —
+        Microsoft's Drasi and RouterArena — and researching vision-language models at Rice's Chili Lab.
       </p>
       <p class="meta-line">
         <a href="mailto:ss516@rice.edu">ss516@rice.edu</a>
@@ -50,6 +52,49 @@
       </p>
     </section>
 
+    <!-- OPEN SOURCE -->
+    <section id="open-source" class="section">
+      <h2 class="sec-title">Open Source</h2>
+
+      <div class="entries">
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>May — Aug 2026</span>
+            <span class="muted">Remote</span>
+          </div>
+          <div class="entry-body">
+            <h3>Open Source Software Intern <span class="at">at Apache Software Foundation</span></h3>
+            <p class="entry-org"><a class="inline-link" href="https://summerofcode.withgoogle.com/programs/2026/projects/ugNM3faX" target="_blank" rel="noopener">Google Summer of Code '26 ↗</a> · Apache Cassandra</p>
+            <ul>
+              <li>Implemented a wire-protocol extension cutting client timeouts during rolling restarts in <a class="inline-link" href="https://github.com/apache/cassandra-java-driver/pull/2091" target="_blank" rel="noopener">Cassandra's Java driver ↗</a>.</li>
+              <li>Enabled graceful node shutdown with the CEP-59 codec and protocol-v5+ tests, upstreamed to <a class="inline-link" href="https://github.com/datastax/native-protocol/pull/61" target="_blank" rel="noopener">DataStax ↗</a>.</li>
+              <li>Cut node drain time from <strong>20s to 7s</strong> by resolving race conditions in connection teardown across distributed nodes.</li>
+              <li>Extended load-balancing and reconnection policies; merged patches upstream via Apache maintainer review.</li>
+            </ul>
+            <p class="tech">Java · Netty · Wire Protocols · Distributed Systems</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <div class="entry-meta">
+            <span>2026 — Now</span>
+            <span class="muted">Remote</span>
+          </div>
+          <div class="entry-body">
+            <h3>Open Source Contributor <span class="at">at Drasi (Microsoft) &amp; RouterArena</span></h3>
+            <p class="entry-org">Reactive data platforms · LLM routing</p>
+            <ul>
+              <li><strong>Drasi:</strong> Unlocked live query result access in <a class="inline-link" href="https://github.com/drasi-project/drasi-platform/pull/420" target="_blank" rel="noopener">Microsoft's SDK ↗</a> via ResultViewClient and ManagementClient.</li>
+              <li><strong>RouterArena:</strong> Expanded an LLM routing benchmark to a new provider via the <a class="inline-link" href="https://github.com/RouteWorks/RouterArena/pull/87" target="_blank" rel="noopener">Groq inference client ↗</a>.</li>
+            </ul>
+            <p class="tech">Rust · Python · SDKs · LLM Benchmarking</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
     <!-- WORK -->
     <section id="work" class="section">
       <h2 class="sec-title">Work</h2>
@@ -58,50 +103,34 @@
 
         <article class="entry">
           <div class="entry-meta">
-            <span>2026 — Now</span>
-            <span class="muted">San Francisco · Remote</span>
+            <span>2025 — Now</span>
+            <span class="muted">Houston, TX</span>
           </div>
           <div class="entry-body">
-            <h3>Open Source Contributor <span class="at">at Apache Software Foundation</span></h3>
-            <p class="entry-org">Google Summer of Code</p>
+            <h3>ML Research Assistant <span class="at">at Chili Lab, Rice University</span></h3>
+            <p class="entry-org">Vision-language models · Benchmarking</p>
             <ul>
-              <li>Architected <strong>Graceful Disconnect</strong> across Apache Cassandra's Java, Python, and C/C++ drivers — a networking protocol and DRAINING node state that reduces client timeouts to near-zero during rolling restarts.</li>
-              <li>Cut node drain time from <strong>20s to 7s</strong> by routing DRAINING through load-balancing and reconnection policies; validated on Docker clusters.</li>
+              <li>Built a <strong>6-stage ETL pipeline</strong> distilling 3,500 data points into a disaster-scene VLM benchmark.</li>
+              <li>Ran <strong>500+ HPO benchmark runs</strong> across 12+ VLMs (Qwen, Gemini, Claude) and analyzed gaps between model families.</li>
             </ul>
-            <p class="tech">Java · C++ · Python · Distributed Systems · Docker</p>
+            <p class="tech">VLMs · Python · ETL · Model Evaluation</p>
           </div>
         </article>
 
         <article class="entry">
           <div class="entry-meta">
-            <span>2026 — Now</span>
+            <span>Summer 2026</span>
             <span class="muted">Wilmington, DE · Remote</span>
           </div>
           <div class="entry-body">
             <h3>Software Engineering &amp; AI Intern <span class="at">at Recruit.so</span></h3>
             <p class="entry-org">Healthcare · Multi-agent NLP</p>
             <ul>
-              <li>Reduced patient follow-up burden by <strong>40%</strong> in a live clinical pilot with a cross-platform React Native (TypeScript) app — Expo, Redux, React Navigation, FCM push.</li>
-              <li>Reached <strong>98%+ follow-up detection accuracy</strong> by engineering a stateful multi-agent NLP engine in LangGraph with sliding context-window memory, on a FastAPI + Postgres + Celery backend.</li>
-              <li>Automated Dockerized deployments to GCP Cloud Run via CI/CD, and grounded AI responses using a PubMed RAG pipeline.</li>
+              <li>Architected a LangGraph multi-agent pipeline for an AI health assistant, cutting follow-up burden <strong>40%</strong>.</li>
+              <li>Engineered PubMed-grounded RAG with 20+ REST endpoints, reaching <strong>98%+ clinical pilot accuracy</strong>.</li>
+              <li>Routed agent tool calls through an MCP server on Dockerized CI/CD, accelerating feature development <strong>80%</strong>.</li>
             </ul>
-            <p class="tech">React Native · TypeScript · LangGraph · FastAPI · RAG · GCP</p>
-          </div>
-        </article>
-
-        <article class="entry">
-          <div class="entry-meta">
-            <span>2025 — Now</span>
-            <span class="muted">Houston, TX</span>
-          </div>
-          <div class="entry-body">
-            <h3>ML Research Assistant <span class="at">at Chili Lab, Rice University</span></h3>
-            <p class="entry-org">Retrieval systems · RAG benchmarking</p>
-            <ul>
-              <li>Built <strong>FreshRAG-Bench</strong>, a TypeScript layer over Python ML services behind a REST boundary — cut refresh compute ~60% via incremental dedup; adopted by 18+ labmates.</li>
-              <li>Boosted retrieval <strong>recall@k ~12%</strong> by tuning RL-trained retrievers, and profiled KV-cache reuse for serving-latency gains.</li>
-            </ul>
-            <p class="tech">RAG · Retrieval · RL · TypeScript · Python</p>
+            <p class="tech">LangGraph · FastAPI · RAG · MCP · Docker · GCP</p>
           </div>
         </article>
 
@@ -115,8 +144,8 @@
             <p class="entry-org">Vision-language model interpretability</p>
             <ul>
               <li>Authored <strong>VPatch</strong>, a framework to patch hidden states and causally localize vision-text fusion in VLM decoders.</li>
-              <li>Traced fusion bands across LLaVA, DeepSeek-VL, and Qwen-VL; flagged spatial &amp; negation failures.</li>
-              <li>Targeted fusion-band LoRA adapters for <strong>100% hallucination correction at &lt;50% of baseline params</strong>.</li>
+              <li>Traced fusion bands across LLaVA, Gemini, and Qwen-VL; flagged spatial &amp; negation failures on 5k+ datapoints.</li>
+              <li>Improved model reliability via LoRA adapters: <strong>97% hallucination correction at &lt;50% of baseline params</strong>.</li>
             </ul>
             <p class="tech">VLMs · PyTorch · LoRA · Interpretability</p>
           </div>
@@ -130,6 +159,17 @@
       <h2 class="sec-title">Projects</h2>
 
       <div class="proj-list">
+
+        <div class="proj proj-static">
+          <div class="proj-main">
+            <h3>FSDP Benchmark</h3>
+            <p>Benchmarked 10 FSDP configurations on ResNet-50 and ViT-B/16 across a SLURM multi-GPU cluster — <strong>82% lower per-GPU memory</strong> and <strong>2.3× throughput</strong> over PyTorch DDP.</p>
+            <p class="tech">PyTorch · Distributed Training · CUDA · SLURM</p>
+          </div>
+          <div class="proj-side">
+            <span class="proj-date">Apr 2026</span>
+          </div>
+        </div>
 
         <a class="proj" href="https://www.linkedin.com/posts/hackathon-prize-project-ugcPost-7424073398948990977-4q7Q/" target="_blank" rel="noopener">
           <div class="proj-main">
@@ -193,15 +233,15 @@
           <h3>Rice University</h3>
           <p class="entry-org">B.S., Computer Science &amp; Artificial Intelligence · Aug 2024 – May 2028</p>
           <p class="muted">
-            Coursework: Machine Learning, Deep Learning Systems (Grad), Deep Learning for Vision &amp; Language (Grad),
-            Linear Algebra, Statistics, Computer Organization, Program Design, Algorithmic Thinking.
+            Coursework: Machine Learning, Deep Learning Systems and Optimizations (Grad), Deep Learning (Grad),
+            Data Structures &amp; Algorithms, Concurrent Program Design, Design Analysis of Algorithms, Computer Organization.
           </p>
         </div>
       </div>
       <div>
         <h2 class="sec-title">Recognition</h2>
         <ul class="honors">
-          <li><strong>ICPC div.2</strong> — Silver, South Central USA Regional</li>
+          <li><strong>ICPC Div. 2 '25</strong> — Silver, South Central Regional</li>
           <li><strong>Rice Datathon 2026</strong> — 1st Place, BroadVail Capital Finance Track (500+ participants)</li>
           <li><strong>Sustaining Excellence in Research Award</strong>, Rice University (2025–26)</li>
         </ul>
@@ -218,11 +258,11 @@
         </div>
         <div>
           <dt>AI / ML</dt>
-          <dd>PyTorch, TensorFlow, scikit-learn, LangChain, LangGraph, RAG, Vertex AI, Vercel AI SDK, Hugging Face</dd>
+          <dd>PyTorch, TensorFlow, scikit-learn, LangChain, Vertex AI, Model Evaluation, Hugging Face</dd>
         </div>
         <div>
           <dt>Infrastructure</dt>
-          <dd>FastAPI, Django, Node.js, React, Netty, Tailwind, Docker, Kubernetes, Linux, Git, Maven, Celery, PostgreSQL, Supabase, pgvector, Redis, CI/CD, GCP, AWS, WebSocket, OpenRouter</dd>
+          <dd>FastAPI, Django, Node.js, React.js, Netty, Tailwind, Docker, Kubernetes, Linux, Git, Maven, Celery, PostgreSQL, CI/CD, GCP, WebSocket, OpenRouter, GitHub Copilot, Claude Code</dd>
         </div>
       </dl>
     </section>
