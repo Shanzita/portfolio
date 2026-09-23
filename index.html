@@ -39,9 +39,9 @@
       </h1>
       <p class="lede">
         I'm a junior at Rice University studying Computer Science and Artificial Intelligence.
-        This past summer I extended Apache Cassandra's drivers through Google Summer of Code and built
-        AI-driven healthcare software at Recruit.so. These days I'm contributing to open source —
-        Microsoft's Drasi and RouterArena — and researching vision-language models at Rice's Chili Lab.
+        I'm extending Apache Cassandra's drivers through Google Summer of Code and researching
+        vision-language models at Rice's Chili Lab. This past summer I built AI-driven healthcare
+        software at Recruit.so, and I contribute to open source — Microsoft's Drasi and RouterArena.
       </p>
       <p class="meta-line">
         <a href="mailto:ss516@rice.edu">ss516@rice.edu</a>
@@ -60,19 +60,18 @@
 
         <article class="entry">
           <div class="entry-meta">
-            <span>May — Aug 2026</span>
+            <span>May 2026 — Now</span>
             <span class="muted">Remote</span>
           </div>
           <div class="entry-body">
-            <h3>Open Source Software Intern <span class="at">at Apache Software Foundation</span></h3>
+            <h3>Open Source Contributor <span class="at">at Apache Software Foundation</span></h3>
             <p class="entry-org"><a class="inline-link" href="https://summerofcode.withgoogle.com/programs/2026/projects/ugNM3faX" target="_blank" rel="noopener">Google Summer of Code '26 ↗</a> · Apache Cassandra</p>
             <ul>
-              <li>Implemented a wire-protocol extension cutting client timeouts during rolling restarts in <a class="inline-link" href="https://github.com/apache/cassandra-java-driver/pull/2091" target="_blank" rel="noopener">Cassandra's Java driver ↗</a>.</li>
-              <li>Enabled graceful node shutdown with the CEP-59 codec and protocol-v5+ tests, upstreamed to <a class="inline-link" href="https://github.com/datastax/native-protocol/pull/61" target="_blank" rel="noopener">DataStax ↗</a>.</li>
-              <li>Cut node drain time from <strong>20s to 7s</strong> by resolving race conditions in connection teardown across distributed nodes.</li>
-              <li>Extended load-balancing and reconnection policies; merged patches upstream via Apache maintainer review.</li>
+              <li>Eliminated client errors during Cassandra node restarts by implementing graceful draining (CEP-59) across the <a class="inline-link" href="https://github.com/apache/cassandra-java-driver/pull/2091" target="_blank" rel="noopener">Java ↗</a>, Python &amp; C++ drivers; verified with a <strong>15K-request restart test</strong>.</li>
+              <li>Enabled safe rolling upgrades via per-connection capability negotiation; merged the wire codec upstream to <a class="inline-link" href="https://github.com/datastax/native-protocol/pull/61" target="_blank" rel="noopener">DataStax ↗</a>.</li>
+              <li>Shipped <strong>13 protocol-v5 failure codes</strong> in Cassandra trunk (first in 9 years); fixed a Netty draining bug.</li>
             </ul>
-            <p class="tech">Java · Netty · Wire Protocols · Distributed Systems</p>
+            <p class="tech">Java · Python · C++ · Netty · Wire Protocols · Distributed Systems</p>
           </div>
         </article>
 
@@ -85,10 +84,10 @@
             <h3>Open Source Contributor <span class="at">at Drasi (Microsoft) &amp; RouterArena</span></h3>
             <p class="entry-org">Reactive data platforms · LLM routing</p>
             <ul>
-              <li><strong>Drasi:</strong> Unlocked live query result access in <a class="inline-link" href="https://github.com/drasi-project/drasi-platform/pull/420" target="_blank" rel="noopener">Microsoft's SDK ↗</a> via ResultViewClient and ManagementClient.</li>
-              <li><strong>RouterArena:</strong> Expanded an LLM routing benchmark to a new provider via the <a class="inline-link" href="https://github.com/RouteWorks/RouterArena/pull/87" target="_blank" rel="noopener">Groq inference client ↗</a>.</li>
+              <li><strong>Drasi (Microsoft):</strong> Brought the <a class="inline-link" href="https://github.com/drasi-project/drasi-platform/pull/420" target="_blank" rel="noopener">Python SDK ↗</a> to .NET/JS parity by adding streaming result clients.</li>
+              <li><strong>RouterArena:</strong> Added <a class="inline-link" href="https://github.com/RouteWorks/RouterArena/pull/87" target="_blank" rel="noopener">5 Groq models ↗</a> to an LLM routing benchmark for low-latency routing evaluation.</li>
             </ul>
-            <p class="tech">Rust · Python · SDKs · LLM Benchmarking</p>
+            <p class="tech">Python · .NET/JS Interop · LLM Benchmarking</p>
           </div>
         </article>
 
@@ -103,17 +102,18 @@
 
         <article class="entry">
           <div class="entry-meta">
-            <span>2025 — Now</span>
+            <span>Jul 2026 — Now</span>
             <span class="muted">Houston, TX</span>
           </div>
           <div class="entry-body">
             <h3>ML Research Assistant <span class="at">at Chili Lab, Rice University</span></h3>
             <p class="entry-org">Vision-language models · Benchmarking</p>
             <ul>
-              <li>Built a <strong>6-stage ETL pipeline</strong> distilling 3,500 data points into a disaster-scene VLM benchmark.</li>
-              <li>Ran <strong>500+ HPO benchmark runs</strong> across 12+ VLMs (Qwen, Gemini, Claude) and analyzed gaps between model families.</li>
+              <li>Developed a <strong>6-stage ETL pipeline</strong> turning 1K weather images into a 16K-QA road-safety VLM benchmark.</li>
+              <li>Implemented reward-based QA generation with 5+ AI agent judges scoring and filtering candidate pairs.</li>
+              <li>Built a VLM eval harness over 20+ REST APIs for 12+ open/closed models; <strong>500+ runs</strong> exposed model gaps.</li>
             </ul>
-            <p class="tech">VLMs · Python · ETL · Model Evaluation</p>
+            <p class="tech">VLMs · Python · ETL · Model Evaluation · REST APIs</p>
           </div>
         </article>
 
@@ -124,13 +124,13 @@
           </div>
           <div class="entry-body">
             <h3>Software Engineering &amp; AI Intern <span class="at">at Recruit.so</span></h3>
-            <p class="entry-org">Healthcare · Multi-agent NLP</p>
+            <p class="entry-org">Healthcare · Agentic AI</p>
             <ul>
-              <li>Architected a LangGraph multi-agent pipeline for an AI health assistant, cutting follow-up burden <strong>40%</strong>.</li>
-              <li>Engineered PubMed-grounded RAG with 20+ REST endpoints, reaching <strong>98%+ clinical pilot accuracy</strong>.</li>
-              <li>Routed agent tool calls through an MCP server on Dockerized CI/CD, accelerating feature development <strong>80%</strong>.</li>
+              <li>Built a LangGraph agent replacing manual clinician follow-ups with multi-day text, photo, and video check-ins.</li>
+              <li>Grounded questions in patient history via RAG: pgvector HNSW, time-decay ranking, LLM rerank 20→8.</li>
+              <li>Achieved <strong>zero missed escalations</strong> on 2,530 seeded cases at sub-ms latency via 25 pre-LLM hard-stop rules.</li>
             </ul>
-            <p class="tech">LangGraph · FastAPI · RAG · MCP · Docker · GCP</p>
+            <p class="tech">LangGraph · RAG · pgvector · PostgreSQL · Docker</p>
           </div>
         </article>
 
@@ -143,8 +143,8 @@
             <h3>ML Research Assistant <span class="at">at Rice SURF</span></h3>
             <p class="entry-org">Vision-language model interpretability</p>
             <ul>
-              <li>Authored <strong>VPatch</strong>, a framework to patch hidden states and causally localize vision-text fusion in VLM decoders.</li>
-              <li>Traced fusion bands across LLaVA, Gemini, and Qwen-VL; flagged spatial &amp; negation failures on 5k+ datapoints.</li>
+              <li>Authored <strong>VPatch</strong>, a hidden-state patching tool that pinpoints vision-text fusion layers in Multimodal LLMs.</li>
+              <li>Traced fusion bands across 3+ closed VLMs; flagged spatial &amp; negation failures on 5k+ datapoints.</li>
               <li>Improved model reliability via LoRA adapters: <strong>97% hallucination correction at &lt;50% of baseline params</strong>.</li>
             </ul>
             <p class="tech">VLMs · PyTorch · LoRA · Interpretability</p>
@@ -163,7 +163,7 @@
         <div class="proj proj-static">
           <div class="proj-main">
             <h3>FSDP Benchmark</h3>
-            <p>Benchmarked 10 FSDP configurations on ResNet-50 and ViT-B/16 across a SLURM multi-GPU cluster — <strong>82% lower per-GPU memory</strong> and <strong>2.3× throughput</strong> over PyTorch DDP.</p>
+            <p>Benchmarked 10 FSDP configs vs. FP32 DDP (ResNet-50/ViT-B/16, SLURM): <strong>2.3× throughput</strong> and <strong>54% less memory</strong> — showed sharding pays off only past single-GPU memory limits, isolating the speedup to FP16.</p>
             <p class="tech">PyTorch · Distributed Training · CUDA · SLURM</p>
           </div>
           <div class="proj-side">
@@ -213,7 +213,7 @@
         <div class="proj proj-static">
           <div class="proj-main">
             <h3>Crisis-Language Detection</h3>
-            <p>ML and NLP pipelines delivered to Abt Global with 10+ teammates, detecting self-harm and suicidal-ideation signals at <strong>97% accuracy</strong> across 3K+ Reddit posts. Fine-tuned BERT against logistic-regression and K-means baselines.</p>
+            <p>Achieved <strong>97% accuracy</strong> flagging self-harm language in 3K Reddit posts by fine-tuning BERT for Abt Global. Built the NLP pipeline — tokenization, embeddings, classifiers — with bias and privacy safeguards on a team of 7.</p>
             <p class="tech">BERT · NLP · ML · Privacy</p>
           </div>
           <div class="proj-side">
@@ -241,9 +241,10 @@
       <div>
         <h2 class="sec-title">Recognition</h2>
         <ul class="honors">
-          <li><strong>ICPC Div. 2 '25</strong> — Silver, South Central Regional</li>
+          <li><strong>ICPC Div. 2 '25</strong> — Bronze, South Central Regional</li>
           <li><strong>Rice Datathon 2026</strong> — 1st Place, BroadVail Capital Finance Track (500+ participants)</li>
-          <li><strong>Sustaining Excellence in Research Award</strong>, Rice University (2025–26)</li>
+          <li><strong>HackBrown 2026</strong> — FetchAI Track Honorable Mention (top 3 of 40+), Compass multi-agent planner</li>
+          <li><strong>Sustaining Excellence in Research Scholarship</strong>, Rice University</li>
         </ul>
       </div>
     </section>
@@ -258,11 +259,11 @@
         </div>
         <div>
           <dt>AI / ML</dt>
-          <dd>PyTorch, TensorFlow, scikit-learn, LangChain, Vertex AI, Model Evaluation, Hugging Face</dd>
+          <dd>PyTorch, TensorFlow, scikit-learn, LangChain, LangGraph, Vertex AI, Model Evaluation, Hugging Face</dd>
         </div>
         <div>
           <dt>Infrastructure</dt>
-          <dd>FastAPI, Django, Node.js, React.js, Netty, Tailwind, Docker, Kubernetes, Linux, Git, Maven, Celery, PostgreSQL, CI/CD, GCP, WebSocket, OpenRouter, GitHub Copilot, Claude Code</dd>
+          <dd>FastAPI, Django, Node.js, React.js, Netty, Tailwind, Docker, Kubernetes, Linux, Git, Maven, PostgreSQL, CI/CD, GCP, Azure, AWS, WebSocket, OpenRouter, Claude Code</dd>
         </div>
       </dl>
     </section>
